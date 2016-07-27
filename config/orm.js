@@ -18,6 +18,18 @@ var orm = {
 			if (err) throw err;
 			cb(data);
 		})
+	},
+	deleteOne: function(table, burger_id, cb) {
+		connection.query("DELETE FROM " + table + " WHERE id=" + burger_id, function(err, data) {
+			if (err) throw err;
+			cb(data);
+		})
+	},
+	reOrderOne: function(table, col_name, burger_id, cb) {
+		connection.query("UPDATE " + table + " SET " + col_name + "=0 " + "WHERE id=" + burger_id, function(err, data) {
+			if (err) throw err;
+			cb(data);
+		})
 	}
 }
 

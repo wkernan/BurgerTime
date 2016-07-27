@@ -18,8 +18,20 @@ router.post('/burgers/create', function(req, res) {
 	})
 })
 
-router.put('/burgers/update/:id', function(req, res) {
+router.put('/burgers/update/devour/:id', function(req, res) {
 	burger.updateOne('devoured', req.params.id, function() {
+		res.redirect('/burgers');
+	})
+})
+
+router.delete('/burgers/delete/:id', function(req, res) {
+	burger.deleteOne(req.params.id, function() {
+		res.redirect('/burgers');
+	})
+})
+
+router.put('/burgers/update/reorder/:id', function(req, res) {
+	burger.reOrderOne('devoured', req.params.id, function() {
 		res.redirect('/burgers');
 	})
 })

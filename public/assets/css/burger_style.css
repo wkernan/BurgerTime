@@ -1,0 +1,40 @@
+body {
+	background-image: url(http://www.matteothun.com/files/immaginiMediaGallery/2014/5/06_Burgerlich_K_Gastraum_1.jpg);
+	color: #FFF;
+}
+
+nav {
+	height: 90px;
+	background-color: rgba(0, 0, 0, 0.75);
+	margin-bottom: 70px;
+}
+
+nav h1 {
+	font-size: 70px;
+	margin-top: 0;
+	color: #FFF;
+}
+
+.row {
+	background-color: rgba(117, 181, 0, 0.75);
+}
+
+.bottom {
+	padding-bottom: 30px;
+}
+
+ul {
+	list-style: none;
+}
+
+.burgers h4 {
+	margin-right: 30px;
+}
+
+.burger {
+	display: -webkit-inline-box;
+}
+
+.btn {
+	margin: 5px;
+}

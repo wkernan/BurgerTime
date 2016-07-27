@@ -15,6 +15,16 @@ var burger = {
 		orm.updateOne('burgers', col, burger_id, function(data) {
 			cb(data);
 		}) 
+	},
+	deleteOne: function(burger_id, cb) {
+		orm.deleteOne('burgers', burger_id, function(data) {
+			cb(data);
+		})
+	},
+	reOrderOne: function(col, burger_id, cb) {
+		orm.reOrderOne('burgers', col, burger_id, function(data) {
+			cb(data);
+		})
 	}
 }
 
