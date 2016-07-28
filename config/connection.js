@@ -8,14 +8,7 @@ var connection = mysql.createConnection({
 });
 
 var handleDisconnect = function() {
-	var connection = mysql.createConnection({
-    host: process.env.db_host || 'localhost',
-    port: 3306,
-    user: process.env.db_user || 'root',
-    password: process.env.db_pw || '',
-    database: process.env.db || 'burgers_db'
-	});
-
+  
   connection.connect(function(err) {              // The server is either down
     if(err) {                                     // or restarting (takes a while sometimes).
       console.log('error when connecting to db:', err);
